@@ -38,12 +38,13 @@ public class BlastNoGUIMain {
 			//JPanel 1
 			JPanel p1=new JPanel();
 			p1.setLayout(new FlowLayout());
+			p1.setBackground(Color.YELLOW);
 			//Creacion de etiqueta y situacion dentro del panel
 			JLabel label=new JLabel("Escoja el tipo de secuencia: ");
 			label.setSize(20, 20);
-			Font fuente=new Font("TimesRoman", Font.BOLD, 12);
+			Font fuente=new Font("TimesRoman", Font.BOLD, 20);
 			label.setFont(fuente);
-			p1.add(label,BorderLayout.WEST);
+			
 
 			//Creacion de los botones para escoger el tipo de secuencia
 			//Boton de proteinas
@@ -52,9 +53,10 @@ public class BlastNoGUIMain {
 			jBPro.setBorderPainted(true);
 			//Boton de nucleotidos
 			JRadioButton jBNuc=new JRadioButton("NUCLEÓTIDOS");
-			jBNuc.setBackground(Color.YELLOW);
+			jBNuc.setBackground(Color.CYAN);
 			jBNuc.setBorderPainted(true);
-			//Situacion de los botones
+			//Situacion de los botones y la etiqueta
+			p1.add(label,BorderLayout.WEST);
 			p1.add(jBPro,BorderLayout.EAST);
 			p1.add(jBNuc,BorderLayout.EAST);
 			
@@ -83,6 +85,7 @@ public class BlastNoGUIMain {
 
 
 			jfr.add(p1,BorderLayout.NORTH);
+			jfr.add(p2,BorderLayout.SOUTH);
 
 		} catch(Exception e) {
 			System.out.println("Error: " + e.getMessage());
